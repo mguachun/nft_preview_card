@@ -15,9 +15,13 @@
     --white:             hsl(0, 0%, 100%);
 }
   
-html { font-family: "Outfit", sans-serif; }
+html { 
+    font-family: "Outfit", sans-serif; 
+}
 
-a { text-decoration: none; }
+a { 
+    text-decoration: none; 
+}
 
 body{
     background-color: var(--oxford-blue);
@@ -40,9 +44,6 @@ body{
 
 }
 
-
-
-
 .card_img {
     position: relative;
     border-radius: 8px;
@@ -50,7 +51,58 @@ body{
     cursor: pointer;
 }
 
+.card_img::after {
+    content: url(./images/icon-view.svg);
+    background: var(--aqua);
+    position: absolute;
+    inset: 0;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.card_img img {
+    width: 100%;
+    display: block;
+}
+
+
 .card_body{
     padding: 23px 0;
     margin-bottom: 15px;
 }
+
+.card_price,
+.card_date {
+  display:     flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.card_price {
+     color: var(--aqua); 
+}
+
+.card_icon {
+    margin-right: 6px;
+ }
+
+.card_date { 
+    color: var(--blue-yonder);
+ }
+
+.card-footer {
+    display:     flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .card_authorIMG{
+    width:  34px;
+    height: 34px;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    margin-right: 15px;
+  }
